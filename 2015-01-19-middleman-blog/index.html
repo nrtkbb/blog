@@ -7,7 +7,7 @@
     <title>middleman-blogでブログを開設する - nrtkbb blog</title>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
     
-      <link href="/css/all.css?1421645598" media="screen" rel="stylesheet" type="text/css" />
+      <link href="/css/all.css?1421646581" media="screen" rel="stylesheet" type="text/css" />
     
   </head>
   <body>
@@ -40,8 +40,7 @@
       
     </aside>
     <div id="blog-body">
-      <p>middleman-blogでブログを開設しました<br>
-将来の自分のために備忘録をまとめておきます</p>
+      <p>middleman-blogを使い始めてるにあたってmiddleman-blog以前というか、周辺知識に乏しかった過去の自分のために、どこを調べれば良いかとか、なんでそれ使うの？という超初心者に向けた開設があったら助かったなーと感じてたので、メインの内容はそっちになります</p>
 
 <p></p>
 
@@ -73,13 +72,13 @@ MacOSXには初めから古いRubyがあるけど新しいものを使う</p>
 
 <p>もう一つ利点を追加するとRubyをインストールするからには<code>gem</code>と言われるRubyで作られたパッケージをいくつもインストールしてやりたいことをする。なんてことがとても多くなる。<code>middleman</code>もその<code>gem</code>の一つ</p>
 
-<p><code>gem</code>は、Rubyのバージョンに強く紐付いてるからRubyのバージョンを上げようと思ったら、インストールしてある<code>gem</code>は当然動かなくなる。（Rubyのバージョンは結構すぐ上がる）</p>
+<p><code>gem</code>は、Rubyのバージョンに強く紐付いてるからRubyのバージョンを上げようと思ったら、インストールしてある<code>gem</code>は当然動かなくなる。(Rubyのバージョンは結構すぐ上がる)</p>
 
 <p><code>rbenv</code>を使ってRubyのインストールを行っていれば<code>gem</code>をインストールする時も、アクティブになっているRubyのバージョンと同じところに<code>gem</code>をインストールするようになる</p>
 
 <p><code>rbenv</code>はRubyのバージョンを切り替えながら、実はこの<code>gem</code>も切り替えてる</p>
 
-<p>そういった背景があるので<code>rbenv</code>をインストールしてRuby（と<code>gem</code>）を管理する</p>
+<p>そういった背景があるので<code>rbenv</code>をインストールしてRuby(と<code>gem</code>)を管理する</p>
 <pre class="highlight shell"><code><span class="c"># homebrewを使ってrbenvをインストール</span>
 <span class="gp">$ </span>brew updage
 <span class="gp">$ </span>brew install rbenv ruby-build
@@ -111,7 +110,7 @@ MacOSXには初めから古いRubyがあるけど新しいものを使う</p>
 
 <p>まずはBundlerを使わずに、普通にインストールする<br>
 後述するmiddleman-blogのプロジェクトテンプレートを展開するコマンドのために、どうしてもシステムワイドにインストールが必要なんだよね。このへんややこしい<br>
-Bundler管理下のmiddlemanと、システムワイドの（普通に<code>gem install middleman</code>とインストールした）middlemanを混同しないようにする</p>
+Bundler管理下のmiddlemanと、OSへインストールされた(普通に<code>gem install middleman</code>とインストールした)middlemanを混同しないようにする</p>
 <pre class="highlight shell"><code><span class="gp">$ </span>gem install middleman
 <span class="gp">$ </span>gem install middleman-blog
 </code></pre>
@@ -123,7 +122,7 @@ Bundler管理下のmiddlemanと、システムワイドの（普通に<code>gem 
 <pre class="highlight shell"><code><span class="gp">$ </span>middleman init BLOG_DIR_NAME --template<span class="o">=</span>blog --skip-bundle
 </code></pre>
 
-<p><code>BLOG_DIR_NAME</code>を指定しないと、カレントディレクトリに色んなファイルやディレクトリが展開されてしまう。作業ディレクトリを掘ってからその中で実行するか、上記のように作業ディレクトリ名を指定して実行しないとひどいことになる（なった）</p>
+<p><code>BLOG_DIR_NAME</code>を指定しないと、カレントディレクトリに色んなファイルやディレクトリが展開されてしまう。作業ディレクトリを掘ってからその中で実行するか、上記のように作業ディレクトリ名を指定して実行しないとひどいことになる(なった)</p>
 
 <p><code>--template=blog</code>と指定してるのがプロジェクトテンプレート名にあたる<br>
 今回はブログを開始するので<code>blog</code>を指定</p>
