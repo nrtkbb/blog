@@ -1,0 +1,33 @@
+---
+pageable: true
+per_page: 20
+---
+<% page_articles.each_with_index do |article, i| %>
+  <section>
+    <h2><%= link_to article.title, article %></h2>
+    <aside>
+      <time><%= article.date.strftime('%Y.%m.%d') %></time>
+      <% if article.tags.length >= 1 %>
+        <ul class="tags">
+          <% article.tags.each do |tag| %>
+            <li><a href="/tags/<%= tag %>/"><%= tag %></a></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </aside>
+    <a href="<%= article.url %>">
+      <%= article.summary %>
+    </a>
+  </section>
+<% end %>
+<% if paginate && (next_page || prev_page) %>
+  <div id="pagenate-links">
+    <p id="pagenate-cur">Page <%= page_number %> of <%= num_pages %></p>
+    <% if next_page %>
+      <p><%= link_to 'old page', next_page %></p>
+    <% end %>
+    <% if prev_page %>
+      <p><%= link_to 'new page', prev_page %></p>
+    <% end %>
+  </div>
+<% end %>
