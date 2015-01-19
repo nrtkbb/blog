@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>nrtkbb blog</title>
+  <subtitle></subtitle>
+  <id>http://blog.nrtkbb.com</id>
+  <link href="http://blog.nrtkbb.com"/>
+  <link href="http://blog.nrtkbb.com/atom.xml" rel="self"/>
+  <updated>2015-01-18T15:00:00Z</updated>
+  <author>
+    <name>nrtkbb</name>
+  </author>
+  <entry>
+    <title>middleman-blogでブログを開設する</title>
+    <link rel="alternate" href="http://blog.nrtkbb.com/2015-01-19-middleman-blog/"/>
+    <id>http://blog.nrtkbb.com/2015-01-19-middleman-blog/</id>
+    <published>2015-01-18T15:00:00Z</published>
+    <updated>2015-01-19T13:30:01+09:00</updated>
+    <author>
+      <name>nrtkbb</name>
+    </author>
+    <content type="html">&lt;p&gt;middleman-blogでブログを開設しました&lt;br&gt;
+将来の自分のために備忘録をまとめておきます&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_0"&gt;僕の環境&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MacOSX&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;homebrew&lt;/code&gt;インストール済み&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_1"&gt;Rubyのインストールのためのrbenv&lt;/h3&gt;
+
+&lt;p&gt;まずはRubyのインストールから&lt;br&gt;
+MacOSXには初めから古いRubyがあるけど新しいものを使う&lt;/p&gt;
+
+&lt;p&gt;今なら&lt;code&gt;rbenv&lt;/code&gt;を使ってRubyをインストールする&lt;br&gt;
+&lt;code&gt;rbenv&lt;/code&gt;を使うモチベーションになるわかりやすい利点があったので引用&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://tech-sketch.jp/2014/04/rbenvで複数バージョンのrubyを管理する.html"&gt;rbenvで複数バージョンのRubyを管理する&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;・新しいバージョンのRubyの機能を試したい&lt;br&gt;
+・新しいバージョンでアプリケーションの動作確認がしたい&lt;br&gt;
+・Rubyを古いバージョンに一時的に戻したい&lt;br&gt;
+・アプリケーションごとに使いたいバージョンが異なる&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;もう一つ利点を追加するとRubyをインストールするからには&lt;code&gt;gem&lt;/code&gt;と言われるRubyで作られたパッケージをいくつもインストールしてやりたいことをする。なんてことがとても多くなる。&lt;code&gt;middleman&lt;/code&gt;もその&lt;code&gt;gem&lt;/code&gt;の一つ&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gem&lt;/code&gt;は、Rubyのバージョンに強く紐付いてるからRubyのバージョンを上げようと思ったら、インストールしてある&lt;code&gt;gem&lt;/code&gt;は当然動かなくなる。（Rubyのバージョンは結構すぐ上がる）&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv&lt;/code&gt;を使ってRubyのインストールを行っていれば&lt;code&gt;gem&lt;/code&gt;をインストールする時も、アクティブになっているRubyのバージョンと同じところに&lt;code&gt;gem&lt;/code&gt;をインストールするようになる&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv&lt;/code&gt;はRubyのバージョンを切り替えながら、実はこの&lt;code&gt;gem&lt;/code&gt;も切り替えてる&lt;/p&gt;
+
+&lt;p&gt;そういった背景があるので&lt;code&gt;rbenv&lt;/code&gt;をインストールしてRuby（と&lt;code&gt;gem&lt;/code&gt;）を管理する&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="c"&gt;# homebrewを使ってrbenvをインストール&lt;/span&gt;
+&lt;span class="gp"&gt;$ &lt;/span&gt;brew updage
+&lt;span class="gp"&gt;$ &lt;/span&gt;brew install rbenv ruby-build
+&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'eval "$(rbenv init -)"'&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile
+&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/.bash_profile
+
+&lt;span class="c"&gt;# rbenvを使ってRubyをインストール&lt;/span&gt;
+&lt;span class="gp"&gt;$ &lt;/span&gt;rbenv install 2.1.4
+&lt;span class="gp"&gt;$ &lt;/span&gt;rbenv global 2.1.4
+&lt;span class="gp"&gt;$ &lt;/span&gt;rbenv rehash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/a_ishidaaa/items/8cc14453289dba1413dd"&gt;[rbenv]コマンド備忘録 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_2"&gt;Bundlerのインストール&lt;/h3&gt;
+
+&lt;p&gt;Rubyをインストールしたら、同時に&lt;code&gt;bundler&lt;/code&gt;をインストールする&lt;br&gt;
+&lt;code&gt;bundler&lt;/code&gt;を使う利点は以下の記事を参照&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://shokai.org/blog/archives/7262"&gt;Ruby書くならBundler使え&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;gem install bundle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="toc_3"&gt;middlemanとmiddleman-blogのインストール&lt;/h3&gt;
+
+&lt;p&gt;まずはBundlerを使わずに、普通にインストールする&lt;br&gt;
+後述するmiddleman-blogのプロジェクトテンプレートを展開するコマンドのために、どうしてもシステムワイドにインストールが必要なんだよね。このへんややこしい&lt;br&gt;
+Bundler管理下のmiddlemanと、システムワイドの（普通に&lt;code&gt;gem install middleman&lt;/code&gt;とインストールした）middlemanを混同しないようにする&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;gem install middleman
+&lt;span class="gp"&gt;$ &lt;/span&gt;gem install middleman-blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="toc_4"&gt;プロジェクトテンプレートを利用して作業を開始する&lt;/h3&gt;
+
+&lt;p&gt;Middlemanには色々なテンプレートが用意されていて、テンプレートを元にひな形をポコっと作って作業を開始することが出来る&lt;br&gt;
+&lt;code&gt;middleman-blog&lt;/code&gt;もその一つ&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman init BLOG_DIR_NAME --template&lt;span class="o"&gt;=&lt;/span&gt;blog --skip-bundle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;BLOG_DIR_NAME&lt;/code&gt;を指定しないと、カレントディレクトリに色んなファイルやディレクトリが展開されてしまう。作業ディレクトリを掘ってからその中で実行するか、上記のように作業ディレクトリ名を指定して実行しないとひどいことになる（なった）&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--template=blog&lt;/code&gt;と指定してるのがプロジェクトテンプレート名にあたる&lt;br&gt;
+今回はブログを開始するので&lt;code&gt;blog&lt;/code&gt;を指定&lt;/p&gt;
+
+&lt;p&gt;※ちなみにMiddlemmanはブログ以外にも様々な目的で使用されていて、そのためのプロジェクトテンプレートもいくつか用意されてる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://directory.middlemanapp.com/#/templates/all"&gt;Middleman Directory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;--skip-bundle&lt;/code&gt;は、プロジェクトテンプレートの展開と同時にMiddlemanが勝手に&lt;code&gt;bundle install&lt;/code&gt;を実行してしまうのを防ぐため。これは好みの問題なので、正直どちらでも良い&lt;/p&gt;
+
+&lt;p&gt;さて、プロジェクトテンプレートが展開されたので中に入って見てみる&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;blog-dir-name
+&lt;span class="gp"&gt;$ &lt;/span&gt;tree
+.
+├── Gemfile
+├── config.rb
+└── &lt;span class="nb"&gt;source&lt;/span&gt;
+    ├── 2012-01-01-example-article.html.markdown
+    ├── calendar.html.erb
+    ├── feed.xml.builder
+    ├── images
+    ├── index.html.erb
+    ├── javascripts
+    ├── layout.erb
+    ├── stylesheets
+    └── tag.html.erb
+
+4 directories, 8 files
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Gemfile&lt;/strong&gt;&lt;br&gt;
+使用したい&lt;code&gt;gem&lt;/code&gt;を記載するところ&lt;br&gt;
+変更したら&lt;code&gt;bundle update&lt;/code&gt;を実行する&lt;br&gt;
+Gemfileの書き方は色々あって、すごく良くまとまってる記事があるのでこれを参考にすると良いと思う&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://xxxcaqui.hatenablog.com/entry/2013/02/11/013421"&gt;Gemfileについて調べてみた - xxxcaqui.log&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;config.rb&lt;/strong&gt;&lt;br&gt;
+グローバル設定的なところ&lt;br&gt;
+middleman関連の&lt;code&gt;gem&lt;/code&gt;は全部ここに設定を書き込んでおくと参照してくれるようになる&lt;br&gt;
+設定を書くところだけど、普通にRubyのファイルなのでここでゴニョゴニョと変数を作っておけばテンプレートからも使用できる変数になる&lt;br&gt;
+ブログ関連の設定は公式サイトを参考にすると良いと思う&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://middlemanapp.com/jp/basics/blogging/"&gt;Middleman: ブログ機能&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;source&lt;/strong&gt;&lt;br&gt;
+ここには見慣れた見慣れたファイルが入ってるのでこの辺を編集していくことになる
+軌道に乗ってしまえば後はここの中の作業が中心になるはず&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.erb&lt;/strong&gt;&lt;br&gt;
+この拡張子はテンプレートエンジンのもので、Rails界隈で見られる&lt;br&gt;
+ビルドすると&lt;code&gt;.erb&lt;/code&gt;を取ったファイルに展開される&lt;br&gt;
+書き方（というか読み方も）はRailsのドキュメントがわかりやすかった&lt;br&gt;
+今なら&lt;a href="http://slim-lang.com/"&gt;Slim&lt;/a&gt;とか&lt;a href="http://haml.info/"&gt;haml&lt;/a&gt;とかの方が流行ってるので書きなおしても良いかもしれない&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://railsdoc.com/view"&gt;ビュー(view) - Railsドキュメント&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;とりあえずは何も変更せず、素の状態を見れるようにするために&lt;code&gt;bundle install&lt;/code&gt;を行って、作業用サーバを立ち上げる&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;bundle install --path&lt;span class="o"&gt;=&lt;/span&gt;bundle
+&lt;span class="gp"&gt;$ &lt;/span&gt;bundle &lt;span class="nb"&gt;exec &lt;/span&gt;middleman server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bundler管理下に置かれたmiddlemanを実行したいので&lt;code&gt;bundle exec&lt;/code&gt;をコマンドの先頭に追加してある  &lt;/p&gt;
+
+&lt;p&gt;そうすると&lt;code&gt;http://localhost:4567/&lt;/code&gt;に&lt;s&gt;ものすっごい殺風景な&lt;/s&gt;シンプルなサイトが立ち上がる&lt;br&gt;
+あとは煮るなり焼くなりすればいい&lt;/p&gt;
+</content>
+  </entry>
+</feed>
