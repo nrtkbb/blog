@@ -5,16 +5,171 @@
   <id>http://blog.nrtkbb.com</id>
   <link href="http://blog.nrtkbb.com"/>
   <link href="http://blog.nrtkbb.com/atom.xml" rel="self"/>
-  <updated>2015-01-18T15:00:00Z</updated>
+  <updated>2015-01-24T15:00:00Z</updated>
   <author>
     <name>nrtkbb</name>
   </author>
+  <entry>
+    <title>NGUIの公式情報探し方</title>
+    <link rel="alternate" href="http://blog.nrtkbb.com/2015-01-25-ngui-intro/"/>
+    <id>http://blog.nrtkbb.com/2015-01-25-ngui-intro/</id>
+    <published>2015-01-24T15:00:00Z</published>
+    <updated>2015-01-25T02:25:12+09:00</updated>
+    <author>
+      <name>nrtkbb</name>
+    </author>
+    <content type="html">&lt;p&gt;NGUIの使い方を覚えるにあたってググってみると、導入用のやさしい内容は半年や1年前にアップされた記事が引っかかり、最新版でも通用する解説なのかどうかわからず困ってしまったので、公式の最新情報をどうやって仕入れるかメモっておこうと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_0"&gt;NGUIとは&lt;/h3&gt;
+
+&lt;p&gt;&lt;img alt="NGUIロゴ" src="/img/2015-01-25-ngui-intro/ngui.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;UnityのUIを実装するためのアセットです&lt;br&gt;
+Unity標準機能のuGUIもありますが、NGUIの方が歴史が長いですし、開発も精力的です&lt;br&gt;
+有料です&lt;/p&gt;
+
+&lt;h3 id="toc_1"&gt;公式情報&lt;/h3&gt;
+
+&lt;p&gt;NGUIをImport後 &lt;strong&gt;メニュー＞NGUI＞Help&lt;/strong&gt; を選択するとヘルプページが開きます&lt;br&gt;
+まずはこのページにあるTutorialを見ながら、Unityを開き、解説されてることを手を動かして確認するだけで、随分分かった気になってくるのでオススメです&lt;br&gt;
+英語の音声で解説されていて、半分ぐらい何を言ってるか理解できなかったのですが、ぶっちゃけ操作をそのままトレースすれば動画と同じ結果が得られるのでそこまで心配することもないと思います&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6754"&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="toc_2"&gt;NGUI3.6.0 Tutorial 1: The Environment&lt;/h4&gt;
+
+&lt;p&gt;NGUIで開発するにあたっての画面構成や環境設定を確認する動画&lt;/p&gt;
+
+&lt;div class="youtube"&gt;
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/dM44h752LyA" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h4 id="toc_3"&gt;NGUI3.6.0 Tutorial 2: The Basics&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;古いバージョンからアップデートする方法&lt;/li&gt;
+&lt;li&gt;SpriteやLabelの作り方&lt;/li&gt;
+&lt;li&gt;Depthの動作&lt;/li&gt;
+&lt;li&gt;アンカーの使い方&lt;/li&gt;
+&lt;li&gt;UIコントロールの作り方&lt;/li&gt;
+&lt;li&gt;右クリックメニューについての解説&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="youtube"&gt;
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/aWZaq1eLqyE" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h4 id="toc_4"&gt;NGUI3.6.0 Tutorial 3: Interaction&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ボタンの作り方&lt;/li&gt;
+&lt;li&gt;ボタンにカーソルを重ねたり、クリックした時の挙動の制御方法&lt;/li&gt;
+&lt;li&gt;Spriteの大きさを変えたり、変化のスピードをコントロールする方法&lt;/li&gt;
+&lt;li&gt;Spriteをフェードアウトする方法&lt;/li&gt;
+&lt;li&gt;キーボードの入力を受け取って操作&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="youtube"&gt;
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/jDxWG81sNPc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h4 id="toc_5"&gt;NGUI3.6.0 Tutorial 4&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スクロールするビューを作る方法&lt;/li&gt;
+&lt;li&gt;スクロールビューの中にドラッグできるボタンを作る方法&lt;/li&gt;
+&lt;li&gt;スクロールビューを複数作って、中身をドラッグで交換できるようにする方法&lt;/li&gt;
+&lt;li&gt;スクロールバーと連携させる方法&lt;/li&gt;
+&lt;li&gt;Example 11というシーンファイルの概要説明&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="youtube"&gt;
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/UK3aMHRfgcw" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h4 id="toc_6"&gt;NGUI3.6.0 Tutorial 5&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;アンカーについての詳しい説明&lt;/li&gt;
+&lt;li&gt;UIRootの設定についての説明&lt;/li&gt;
+&lt;li&gt;ローカライズのやり方&lt;/li&gt;
+&lt;li&gt;Atlas Maker toolの使い方&lt;/li&gt;
+&lt;li&gt;テクスチャーについての説明&lt;/li&gt;
+&lt;li&gt;atlasにspriteを追加する方法&lt;/li&gt;
+&lt;li&gt;フォントの扱い方の説明&lt;/li&gt;
+&lt;li&gt;atlasからspriteを消す方法&lt;/li&gt;
+&lt;li&gt;スクリプト（C#のコードでした）について&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="youtube"&gt;
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/GIpccFRIXmo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6754"&gt;Overview&lt;/a&gt;のページにはもっとたくさんYouTubeへのリンクが貼られてるので、たくさん見たい人はリンクへ飛んでください&lt;/p&gt;
+
+&lt;h3 id="toc_7"&gt;右クリックメニュー＞Help&lt;/h3&gt;
+
+&lt;p&gt;上記の動画を見ると分かりますが、spriteやtableをSceneビューで右クリックすると &lt;strong&gt;Help&lt;/strong&gt; という項目があります。これを選択すると個別に解説しているページに飛ぶことが出来ます&lt;br&gt;
+Inspectorビュー上で名前のところを右クリックしても同様に &lt;strong&gt;Help&lt;/strong&gt; を選択できます&lt;/p&gt;
+
+&lt;p&gt;いくつかURLを列挙してみました(もっとあります)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6704"&gt;UISprite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6763"&gt;UIScrollView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6703"&gt;UITexture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6705"&gt;UIPanel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6756"&gt;UIGrid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6758"&gt;UITable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6702"&gt;UIWidget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6708"&gt;UIButton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6709"&gt;UIToggle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/forum/index.php?topic=6715"&gt;UISlider&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_8"&gt;Tutorialシーンファイル&lt;/h3&gt;
+
+&lt;p&gt;ProjectパネルのSearch部分に &lt;strong&gt;tutorial&lt;/strong&gt; と入力するといくつかのシーンファイルが出てきます&lt;br&gt;
+これらを1つずつ開いて見ると、シンプルなシーンとそれを解説するラベルが入っています&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="tutorial" src="/img/2015-01-25-ngui-intro/tutorial.png" /&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_9"&gt;Exampleシーンファイル&lt;/h3&gt;
+
+&lt;p&gt;Tutorialシーンファイルと同様にProjectパネルのSearch部分に &lt;strong&gt;example&lt;/strong&gt; と入力するといくつかのシーンファイルが出てきます&lt;br&gt;
+Tutorialシーンファイルよりも若干実践的なシーンと、それを解説するラベルが入っています&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="example" src="/img/2015-01-25-ngui-intro/example.png" /&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_10"&gt;ReadMeファイル&lt;/h3&gt;
+
+&lt;p&gt;同じように &lt;strong&gt;ReadMe&lt;/strong&gt; と検索すると&lt;code&gt;ReadMe - X.X.X.txt&lt;/code&gt;というファイルが見つかると思います(Xには数字が入る)&lt;br&gt;
+この中身を読むと、それぞれのバージョンでなにが新しくなったのか把握することが出来ます&lt;/p&gt;
+
+&lt;h3 id="toc_11"&gt;Class Reference&lt;/h3&gt;
+
+&lt;p&gt;多分最終的にはスクリプトから何にアクセス出来るのか調べるためにこちらを参照するようになると思います&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.tasharen.com/ngui/docs/annotated.html"&gt;NGUI: Next-Gen UI kit: Class List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_12"&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;公式情報を並べた記事になってしまいましたが、それすらも初めはどこにあるのかわからなくて困ってしまったので、とりあえずググって情報を探す自分のような人のために書いてみました&lt;br&gt;
+注意して欲しいのは、ここに載ってる情報はまたすぐに古くなるということです。探し方やどこから発見したのかも併記してあるのでこの記事が古くなっている時はもう一度、インポートしたNGUIメニューのHelpなどからたどる必要があることを覚えておいてください&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>middleman-blogでブログを開設する</title>
     <link rel="alternate" href="http://blog.nrtkbb.com/2015-01-19-middleman-blog/"/>
     <id>http://blog.nrtkbb.com/2015-01-19-middleman-blog/</id>
     <published>2015-01-18T15:00:00Z</published>
-    <updated>2015-01-24T23:44:22+09:00</updated>
+    <updated>2015-01-24T23:47:38+09:00</updated>
     <author>
       <name>nrtkbb</name>
     </author>
