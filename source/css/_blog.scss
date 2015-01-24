@@ -189,6 +189,12 @@ aside{
 }
 
 #blog-body{
+  h3{
+    margin-top:1.5em;
+  }
+  h4{
+    margin-top:2em;
+  }
   a{
     text-decoration:underline;
     color:#1487bd;
@@ -230,5 +236,21 @@ aside{
       right:0;
       line-height:0;
     }
+  }
+  img{
+    max-width:100%;
+  }
+}
+
+.youtube{
+  position:relative;
+  width:100%;
+  padding-top:57%;
+  iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100% !important;
+    height:100% !important;
   }
 }
