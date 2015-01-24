@@ -52,6 +52,13 @@ $ rbenv rehash
 
 - [[rbenv]コマンド備忘録 - Qiita](http://qiita.com/a_ishidaaa/items/8cc14453289dba1413dd)
 
+**2015-01-25追記**  
+[Railsチュートリアル](http://railstutorial.jp/)をやっていたら`rbenv`のもっと良い解説記事を見つけたのでそれも紹介しておく
+
+- [rbenvつかってrailsチュートリアルやってみよう！ | niwatako$](http://niwatako.tips/20140724/article121.html)
+
+**追記おわり**
+
 ### Bundlerのインストール
 
 Rubyをインストールしたら、同時に`bundler`をインストールする  
@@ -152,7 +159,7 @@ $ bundle install --path=bundle
 $ bundle exec middleman server
 ```
 
-Bundler管理下に置かれたmiddlemanを実行したいので`bundle exec`をコマンドの先頭に追加してある  
+Bundler管理下に置かれたmiddlemanを実行したいので`bundle exec`をコマンドの先頭に追加してある
 
 そうすると`http://localhost:4567/`に<s>ものすっごい殺風景な</s>シンプルなサイトが立ち上がる  
 あとは煮るなり焼くなりすればいい
