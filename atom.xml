@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.nrtkbb.com/2015-01-19-middleman-blog/"/>
     <id>http://blog.nrtkbb.com/2015-01-19-middleman-blog/</id>
     <published>2015-01-18T15:00:00Z</published>
-    <updated>2015-01-19T14:54:36+09:00</updated>
+    <updated>2015-01-24T23:44:22+09:00</updated>
     <author>
       <name>nrtkbb</name>
     </author>
@@ -72,6 +72,15 @@ MacOSXには初めから古いRubyがあるけど新しいものを使う&lt;/p&
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://qiita.com/a_ishidaaa/items/8cc14453289dba1413dd"&gt;[rbenv]コマンド備忘録 - Qiita&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2015-01-25追記&lt;/strong&gt;&lt;br&gt;
+&lt;a href="http://railstutorial.jp/"&gt;Railsチュートリアル&lt;/a&gt;をやっていたら&lt;code&gt;rbenv&lt;/code&gt;のもっと良い解説記事を見つけたのでそれも紹介しておく&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://niwatako.tips/20140724/article121.html"&gt;rbenvつかってrailsチュートリアルやってみよう！ | niwatako$&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;追記おわり&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id="toc_2"&gt;Bundlerのインストール&lt;/h3&gt;
 
@@ -171,7 +180,7 @@ middleman関連の&lt;code&gt;gem&lt;/code&gt;は全部ここに設定を書き�
 &lt;span class="gp"&gt;$ &lt;/span&gt;bundle &lt;span class="nb"&gt;exec &lt;/span&gt;middleman server
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Bundler管理下に置かれたmiddlemanを実行したいので&lt;code&gt;bundle exec&lt;/code&gt;をコマンドの先頭に追加してある  &lt;/p&gt;
+&lt;p&gt;Bundler管理下に置かれたmiddlemanを実行したいので&lt;code&gt;bundle exec&lt;/code&gt;をコマンドの先頭に追加してある&lt;/p&gt;
 
 &lt;p&gt;そうすると&lt;code&gt;http://localhost:4567/&lt;/code&gt;に&lt;s&gt;ものすっごい殺風景な&lt;/s&gt;シンプルなサイトが立ち上がる&lt;br&gt;
 あとは煮るなり焼くなりすればいい&lt;/p&gt;
